@@ -1,0 +1,26 @@
+[app]
+title = TikTok Downloader
+package.name = tiktokdl
+package.domain = com.example
+source.dir = .
+source.include_exts = py,kv,png,jpg
+version = 1.0
+
+# yt-dlp single-file ("b") tidak butuh ffmpeg — aman di Android.
+requirements = python3,kivy==2.3.0,yt-dlp,certifi
+
+orientation = portrait
+fullscreen = 0
+
+android.permissions = INTERNET, ACCESS_NETWORK_STATE
+android.api = 33
+android.minapi = 21
+android.ndk = 25b
+android.archs = arm64-v8a
+android.allow_backup = True
+
+p4a.branch = master
+p4a.bootstrap = sdl2
+
+log_level = 2
+warn_on_root = 1
